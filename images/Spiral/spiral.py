@@ -28,14 +28,12 @@ for n in range(1, 7):
             nr = nr+1
             put_label(x0+nt, y0, nr)
         x0 = x1
-        put_label(x0, y0, nr)
         y1 = y0-n
         c.stroke(path.line(x0, y0, x1, y1))
         for nt in range(n):
             nr = nr+1
             put_label(x0, y0-nt, nr)
         y0 = y1
-        put_label(x0, y0, nr)
     else:
         x1 = x0-n
         y1 = y0
@@ -44,20 +42,17 @@ for n in range(1, 7):
             nr = nr+1
             put_label(x0-nt, y0, nr)
         x0 = x1
-        put_label(x0, y0, nr)
         y1 = y0+n
         c.stroke(path.line(x0, y0, x1, y1))
         for nt in range(n):
             nr = nr+1
             put_label(x0, y0+nt, nr)
         y0 = y1
-        put_label(x0, y0, nr)
 x1 = x0+n
 c.stroke(path.line(x0, y0, x1, y1))
 for nt in range(n+1):
     nr = nr+1
     put_label(x0+nt, y0, nr)
-put_label(x0, y0, nr)
 
 filename = os.path.splitext(sys.argv[0])[0]+'.png'
-c.writeGSfile(filename, resolution=200)
+c.writeGSfile(filename, resolution=100)
