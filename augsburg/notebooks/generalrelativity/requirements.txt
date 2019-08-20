@@ -1,0 +1,3 @@
+GraviPy==0.1.0
+mpmath==1.1.0
+sympy==1.4
