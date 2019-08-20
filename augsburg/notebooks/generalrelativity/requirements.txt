@@ -1,3 +1,14 @@
+attrs==19.1.0
+decorator==4.4.0
 GraviPy==0.1.0
+ipython-genutils==0.2.0
+Jinja2==2.10.1
+jsonschema==3.0.2
+jupyter-core==4.5.0
+MarkupSafe==1.1.1
 mpmath==1.1.0
+nbformat==4.4.0
+pyrsistent==0.15.4
+six==1.12.0
 sympy==1.4
+traitlets==4.3.2
