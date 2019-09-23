@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+\usepackage{url}
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+\journalname{Journal of Science Education and Technology}
+%
+\begin{document}
+
+\title{Experiences in teaching with Jupyter with nbgrader}
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+% \subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Marcin Kostur \and
+        Marina Appiou-Nikiforou \and
+        Andreas Papadopoulos \and
+	Gert-Ludwig Ingold
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{Marcin Kostur \at
+              first address \\
+              Tel.: +123-45-678910\\
+              Fax: +123-45-678910\\
+              \email{marcin.kostur@us.edu.pl}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           Marina Appiou-Nikiforou \at
+              European University Cyprus \\
+              \email{M.Nikiforou@euc.ac.cy}
+	   \and
+	   Andreas Papadopoulos \at
+              European University Cyprus \\
+              \email{M.Nikiforou@euc.ac.cy}
+	   \and
+	   Gert-Ludwig Ingold \at
+	      Institut f{\"u}r Physik, Universit{\"a}t Augsburg,
+	      Universit{\"a}tsstra{\ss}e 1, 86135 Augsburg, Germany\\
+	      \email{gert.ingold@physik.uni-augsburg.de}
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include keywords, PACS and mathematical
+subject classification numbers as needed.
+\keywords{First keyword \and Second keyword \and More}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+
+Your text comes here. Separate text sections with
+
+\section{Section title}
+\label{sec:1}
+We discuss Jupyter \cite{jupyter-edu-book} and nbgrader \cite{nbgrader}.
+
+\subsection{Subsection title}
+\label{sec:2}
+
+%% For one-column wide figures use
+%\begin{figure}
+%% Use the relevant command to insert your figure file.
+%% For example, with the graphicx package use
+%  \includegraphics{example.eps}
+%% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:1}       % Give a unique label
+%\end{figure}
+%%
+%% For two-column wide figures use
+%\begin{figure*}
+%% Use the relevant command to insert your figure file.
+%% For example, with the graphicx package use
+%  \includegraphics[width=0.75\textwidth]{example.eps}
+%% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:2}       % Give a unique label
+%\end{figure*}
+%%
+%% For tables use
+%\begin{table}
+%% table caption is above the table
+%\caption{Please write your table caption here}
+%\label{tab:1}       % Give a unique label
+%% For LaTeX tables use
+%\begin{tabular}{lll}
+%\hline\noalign{\smallskip}
+%first & second & third  \\
+%\noalign{\smallskip}\hline\noalign{\smallskip}
+%number & number & number \\
+%number & number & number \\
+%\noalign{\smallskip}\hline
+%\end{tabular}
+%\end{table}
+
+
+\begin{acknowledgements}
+This work was supported through the Erasmus+ programme of the
+European Union.
+\end{acknowledgements}
+
+
+\section*{Conflict of interest}
+The authors declare that they have no conflict of interest.
+
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+%\bibliography{}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+\begin{thebibliography}{99}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+\bibitem{jupyter-edu-book}
+Barba, L. A., Barker, L. J., Blank, D. S., Brown, J, Downey, A. B., George, T.,
+Heagy, L. J., Mandli, K. T., Moore, J. K., Lippert, D., Niemeyer, K. E.,
+Watkins, R. R., West, R. H., Wickes, E., Willing, C., \& Zingale M. (2019).
+Teaching and Learning with Jupyter,
+\url{https://jupyter4edu.github.io/jupyter-edu-book/}.
+\bibitem{nbgrader}
+% https://doi.org/10.21105/jose.00032 
+Project Jupyter, Blank, D., Bourgin, D., Brown, A., Bussonnier, M.,
+Frederic, J., Granger, B., Griffiths, T. L.,  Hamrick, J., Kelley, K.,
+Pacer, M., Page, L., P{\'e}rez, F., Ragan-Kelley, B., Suchow, J. W.,
+\& Willing, C. (2019).
+nbgrader: A Tool for Creating and Grading Assignments in the Jupyter Notebook,
+\textit{Journal of Open Source Education}, 2(11), 32.
+% Format for books
+%\bibitem{RefB}
+%Author, Book title, page numbers. Publisher, place (year)
+% etc
+\end{thebibliography}
+
+\end{document}
+% end of file template.tex
+
