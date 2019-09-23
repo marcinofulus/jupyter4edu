@@ -142,6 +142,206 @@ We discuss Jupyter \cite{jupyter-edu-book} and nbgrader \cite{nbgrader}.
 %\end{tabular}
 %\end{table}
 
+\section{Jupyter and Jupyterhub}
+
+pros and cons of using the Jupyter notebook
+\begin{itemize}
+ \item notebook allows to guide students through a problem set
+ \item problems related to out-of-order execution
+ \item \textit{but} students might think that programming in Python
+       necessarily implies working with a Jupyter notebook,
+       they should know about IDEs (spyder, \dots) and
+       editors (vim, \dots)
+\end{itemize}
+
+pros and cons of using Jupyterhub
+\begin{itemize}
+ \item easily accessible interface to problem sets
+ \item no need to install Python on local computer
+ \item consistent working environment for all students
+ \item \textit{but} may be beginners should gather experience with Python
+       on their own computer
+\end{itemize}
+
+
+\section{\texttt{nbgrader}}
+
+\subsection{Functions}
+
+In \texttt{nbgrader}, the solutions should be implemented in terms of a
+function, so that this function can be tested, typically for different
+parameters. As a consequence, the concept of functions needs to be introduced
+early on in a course. However, the use of functions will be close to the
+concept of a mathematical function in the sense that there will be input values
+and output values. In the tests used to grade the answer, one wants to vary the
+input values and the output value is the object which is to be tested against
+an expectation. Therefore, situations like the absence of arguments or return
+values as well as default arguments and keyword arguments representing more
+advanced concepts, are not required to work with \texttt{nbgrader}.
+
+It is good programming practice to logically structure code into functions of a
+not too large length. Students with \texttt{nbgrader} thus get used to this
+practice early on, in particular if functions are used to build up the final
+solution step by step. The drawback however is that this structure is provided
+to them by the teacher. Students are not actively structuring their code by
+themselves and thus do not really exercise this practise.
+
+In Python, the use of docstrings is highly recommended as way to document
+the behavior of a function. For the use with \texttt{nbgrader}, teachers are
+naturally using docstring because they need to specify the purpose of the
+function and the meaning of the input and output values. Students will thus
+soon consider docstring as standard part of a function. However, they do not
+actively practice the habit of annotating a function with a docstring.
+
+The version of a function released to the students by \texttt{nbgrader} by
+default raises a \texttt{NotImplementedError}. This statement ensures the
+correct working of the function during grading even if no solution is provided.
+Students need to remove the statement and replace it by their solution. It was
+found both in the German as well as the Polish group of students that this need
+was somewhat difficult to convey to them. This difficulty likely arises from
+the fact that students have not been taught the meaning of the \texttt{raise}
+statement. They therefore need to be especially alerted to what they need to do
+with this statement and internalize the removal of the \texttt{raise} statement
+as a recipe.
+
+\subsection{Grading with tests}
+
+The main idea for autograding with \texttt{nbgrader} consists in the teacher
+providing one or several tests while the student needs to develop code which
+satisfies theses tests. This strategy is typical for test-driven development,
+a component of agile programming where tests are written before the code.
+The use of \texttt{nbgrader} thus offers an opportunity to discuss the role
+of testing and the concept of test-driven development. However, it certainly
+depends on the programming background of the specific students whether such
+remarks are fruitful. While one should not expect that students get into the
+habit of test-driven development right away, the concept might stick in their
+mind and be activated at a later time.
+
+The experience in both, the German and the Polish groups was that tests in
+\texttt{nbgrader} problem sets should not only pertain to the specific
+functionality of a solution to be developed by the student. It turned out
+that mistakes like not returning a result or returning a result of an incorrect
+type do not only occur when students start working with \texttt{nbgrader} but
+also in later stages. It has therefore proven useful to separate tests into
+two groups. The first groups of tests check for the existence of a result
+and for the correct type. These are prerequisites for the second group of results
+which test the functionality of the proposed solution for correctness.
+
+The first group of tests should mainly be considered as an opportunity to
+provide feedback to the students. They could be alerted to a missing return
+value by the test
+
+\noindent\texttt{assert result is not None, 'Does your function return
+a result?'}
+
+Quite generally, tests in \texttt{nbgrader} should not only be considered as
+tool for grading but also as an opportunity to give helpful feedback to the
+students while working on the problem set. Providing an expressive error
+message will be helpful for many students who are not yet capable to understand
+or correctly interpret the standard traceback of a Python exception. 
+
+A problem very frequently encountered with students results from detailed 
+tests with clear error messages. Students were found to rely in their assessment
+of correctness of their solution almost entirely on the results of the tests.
+In other words, they typically do not develop a critical attitude towards their
+code and do not see the need of doing their own tests. One could imagine to
+have several blocks of tests to demonstrate that the passing of a number of
+tests does not necessarily need that the code is correct. Setting up such a
+test suite however relies on a good knowledge of typical mistakes which can
+be exploited.
+
+\subsection{Addressing heterogeneity}
+
+It is not uncommon that in programming courses one has to address an audience
+with a wide range of programming capabilities. Some students have no
+programming experience whatsoever and might even show a code writing block
+while others have an extensive programming experience, often in a different
+programming language. For students with little or no programming experience,
+more complex exercise problems need to be decomposed into a number steps while
+experienced students might tackle the problems directly without any additional
+help. The latter students often are proficient in a language different from
+Python. A typical indicator are loops over indiced instead of objects contained
+in a list. Here, the feedback mechanism of \texttt{nbgrader} comes handy, in
+particular for \texttt{nbgrader} version 0.6+.
+
+At the same time, the solution of the problem should provide a source of
+satisfaction for all students. When teaching programming to science students, a
+way could be to appeal to the respective scientific background. However, such
+problem sets are often experienced as an unnecessary mental burden.
+
+In exercise work with \texttt{nbgrader}, we have experimented with allowing for
+individual learning paths by providing one main Jupyter notebook and typically
+a few subnotebooks. The main notebook provides the problem description and the
+notebook cells where the final solution should be developed. The subnotebooks
+focus on one aspect of the solution so that students can work towards a complete
+solution step by step.
+
+To illustrate our approach by way of an example, we consider a problem set
+where a graphical representation of a Julia set shall be generated. Students
+need to repetitively carry out an interation $z\rightarrow z^2+c$ where $c$ is
+a given complex constant and the iteration starts from complex values $z_0$
+taken on a grid in the complex plane. The Julia set distinguishes between the
+initial conditions for which $z$ converges from those where $z$ remains bounded.
+In practice, this distinction can be achieved by checking whether an appropriately
+chosen bound is crossed within a given maximum number of iterations. A beautiful
+graphical representation can be obtained by converting the number of iterations
+actually needed to cross the bound into a color. 
+
+This problem presents a number of difficulties to the students. From an
+algorithmic point of view, the iteration needs to be implemented and stopped
+once either the bound is crossed or the maximum number of iterations has been
+reached. On a more conceptual level, students were often found to encounter
+problems in imagining how a computer can represent colors. A subnotebook
+explaining the concept of a colormap and allowing students to explore the
+translation of a number into a color representation turns out to be helpful.
+Here, the rich output of the Jupyter notebook is used by providing a SVG
+representation of a square filled with the respective color. Care needs to
+be taken that the students are not irritated by the code needed to provide
+the infrastructure for generating the colored square. The opportunity of
+playing with the conversion of a number into a visual representation of a
+color usually turns out to be very helpful. At this point, a background of
+the RGB or HSV representation of colors is not necessarily required but
+can be offered to interested students in a separate subnotebook.
+
+Another conceptual obstacle for beginners is the idea of pixels in an image
+and how to walk along a two-dimensional grid or even a one-dimensional grid
+within a program. This aspect thus deserves a separate subnotebook and proceeding
+in steps from one to two dimensions proved to be useful. The main reason for
+addressing the one-dimensional case first is due to the observation that if
+students are asked to produce a given number of equally spaced points between
+two values, they typically confuse the number of points with the number of
+intervalls between the points. This issue needs to be first clarified in one
+dimension before the two-dimensional case can be addressed.
+
+Structuring a problem into a number of steps with their own notebooks allows to
+offer individual learning paths. In the supervised exercise sessions it turned
+out that the vast majority of students tends to follow the step-by-step
+learning path which led most directly to the solution. In other words, students
+would have needed very strong encouragement to try to develop the solution
+completely on their own. On the other hand, students typically did not go through
+the additional material provided on the RGB and HSV representation.
+
+On a more technical level, it could be observed that the fact that opening a
+new notebook would lead to an extra tab in the browser could become quite
+confusing for the students unless the take care to close tabs not needed
+anymore. In particular, it happened that the students opened notebooks more
+than once and then getting confused in which notebook they were actually
+working.
+
+Using \texttt{nbgrader} in a scenario as described above, an additional
+difficulty arises in the grading. Students working on subnotebooks should earn
+the respective points even if they are able to only solve some of the steps
+successfully. On the other hand, a student who solves the problem without going
+through all the notebooks should not be punished. The \texttt{nbgrader}
+database holds all the points obtained for the various notebooks, from which a
+final number of points can be determined. This is however a functionality not
+directly provided by \texttt{nbgrader}. If points are assigned appropriately to
+the individual tasks, one can determine the number of points earned as the
+minimum of the total sum of points earned and the maximum number of points
+attributed to the problem set.
+
+\section{Conclusion}
+
 
 \begin{acknowledgements}
 This work was supported through the Erasmus+ programme of the
