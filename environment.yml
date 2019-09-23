@@ -1,0 +1,16 @@
+name: example-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - k3d
+  - pip
+  - sqlalchemy
+  - sympy
+  - nbgrader
+  - pip:
+    - nbgitpuller
+    - sphinx-gallery
+    - pandas
+    - matplotlib
