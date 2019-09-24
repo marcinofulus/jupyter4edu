@@ -124,12 +124,6 @@ sets for exercises. In the most recent version (0.6.0) at the time of this
 writing, the possibility of giving feedback to students has been significantly
 facilitated.
 
-\section{Section title}
-\label{sec:1}
-
-\subsection{Subsection title}
-\label{sec:2}
-
 %% For one-column wide figures use
 %\begin{figure}
 %% Use the relevant command to insert your figure file.
@@ -167,26 +161,38 @@ facilitated.
 %\end{table}
 
 \section{Jupyter and Jupyterhub}
+\label{sec:jupyter_jupyterhub}
 
-pros and cons of using the Jupyter notebook
-\begin{itemize}
- \item notebook allows to guide students through a problem set
- \item problems related to out-of-order execution
- \item \textit{but} students might think that programming in Python
-       necessarily implies working with a Jupyter notebook,
-       they should know about IDEs (spyder, \dots) and
-       editors (vim, \dots)
-\end{itemize}
+A Jupyter notebook consists of a collection of two types of cells, namely code
+cells and text cells. The latter may contain text written in markdown, possibly
+including formulas as well as figures. This structure facilitates to guide
+students through a problem set. Usually, the code in a notebook is intended to
+be executed in a linear fashion even though this is not imposed by the
+notebook. In fact, the notebook should invite students to experiment which
+implies the opening of new cells and the execution of code written by the
+student. In this process, out-of-order execution naturally occurs and can have
+side effects which tend to confuse students. While the order of execution of
+individual cells can be inferred by the sequence number attributed to a cell
+once it has been executed, in particular beginners are not aware of the
+problems that out-of-order execution can entail.
 
-pros and cons of using Jupyterhub
-\begin{itemize}
- \item easily accessible interface to problem sets
- \item no need to install Python on local computer
- \item consistent working environment for all students
- \item \textit{but} may be beginners should gather experience with Python
-       on their own computer
-\end{itemize}
+Using the Jupyter notebook for exercises is interesting because students can
+easily experiment with code. At the same time one should be aware that students
+might think that this is the standard way of programming in Python. While it is
+indeed possible to develop pieces of a more complex program in the Jupyter 
+notebook and later combine these pieces, this is not the standard approach for
+complex programming tasks. Therefore, students should also be acquainted with
+the IDEs like Spyder distributed with the Anaconda distribution or the use of
+editors like vim or others which can be configures to support programming in
+Python.
 
+Jupyterhub as a centrally provided resource to run a Jupyter notebook from a
+remote computer makes problem sets or more generally teaching material easily
+accessible without the need for a local Python installation. Furthermore, this
+approach ensures a consistent working environment for all students. However,
+it might be an important experience for students that all work which they
+are doing could in fact be done on their own computer instead of using some
+remote service where the underlying machinery is completely hidden.
 
 \section{\texttt{nbgrader}}
 
