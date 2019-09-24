@@ -97,11 +97,35 @@ subject classification numbers as needed.
 \section{Introduction}
 \label{intro}
 
-Your text comes here. Separate text sections with
+In recent years, Python has become increasingly popular as a first programming
+language at universities. Due to its expressive code, it provides a low entry
+barrier for students while at the same time being well suited for serious
+scientific work (for prominent recent examples see \cite{gw150914} and
+\cite{EHT}). In a teaching environment, the availability of a Python
+distribution for all operating systems likely to be used by students proves to
+be very helpful to ensure a consistent working environment for all students.
+
+The development of the Jupyter notebook has opened up exciting new
+possibilities in teaching \cite{jupyter-edu-book}. At the same time,
+the Jupyter notebook has become the de facto standard among data
+scientists. Employing the Jupyter notebook in teaching provides the
+students not only with new way to learn but also with a tool potentially
+useful for their further career.
+
+While it is possible to run the Jupyter notebook with a Python kernel on the
+students' computer, the fact that work with the Jupyter notebook is browser-based
+suggests to provide students with an access to a Python kernel via a Jupyterhub.
+This approach avoids any installation requirements on the students' side besides
+the availablility of a browser.
+
+For the Jupyter notebook, the extension \texttt{nbgrader} was developed
+\cite{nbgrader} which serves as a tool to distribute, collect and grade problem
+sets for exercises. In the most recent version (0.6.0) at the time of this
+writing, the possibility of giving feedback to students has been significantly
+facilitated.
 
 \section{Section title}
 \label{sec:1}
-We discuss Jupyter \cite{jupyter-edu-book} and nbgrader \cite{nbgrader}.
 
 \subsection{Subsection title}
 \label{sec:2}
@@ -365,12 +389,25 @@ The authors declare that they have no conflict of interest.
 % and use \bibitem to create references. Consult the Instructions
 % for authors for reference list style.
 %
+\bibitem{gw150914}
+% https://doi.org/10.1103/PhysRevD.93.122003
+Abbott, B. P. \textit{et al.} (2016).
+GW150914: First results from the search for binary black hole coalescence with Advanced LIGO,
+\textit{Physical Review D}, 93(12), 122003.
+
+\bibitem{EHT}
+% https://doi.org/10.3847/2041-8213/ab0c57
+The Event Horizon Telescope Collaboration (2019).
+First M87 Event Horizon Telescope Results. III. Data Processing and Calibration,
+\textit{The Astrophysical Journal Letters} 875(1), L3.
+
 \bibitem{jupyter-edu-book}
 Barba, L. A., Barker, L. J., Blank, D. S., Brown, J, Downey, A. B., George, T.,
 Heagy, L. J., Mandli, K. T., Moore, J. K., Lippert, D., Niemeyer, K. E.,
 Watkins, R. R., West, R. H., Wickes, E., Willing, C., \& Zingale M. (2019).
 Teaching and Learning with Jupyter,
 \url{https://jupyter4edu.github.io/jupyter-edu-book/}.
+
 \bibitem{nbgrader}
 % https://doi.org/10.21105/jose.00032 
 Project Jupyter, Blank, D., Bourgin, D., Brown, A., Bussonnier, M.,
@@ -386,5 +423,3 @@ nbgrader: A Tool for Creating and Grading Assignments in the Jupyter Notebook,
 \end{thebibliography}
 
 \end{document}
-% end of file template.tex
-
