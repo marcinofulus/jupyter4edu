@@ -19,7 +19,7 @@ installation, in particular, if one needs scientific libraries anyway.
 ### Installing `miniconda`
 
 The latest version of `miniconda` can be obtained from
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pemhttps://docs.conda.io/en/latest/miniconda.html. For our purposes, we choose
+https://docs.conda.io/en/latest/miniconda.html. For our purposes, we choose
 `Miniconda Linux 64-bit` for Python 3.7, the most recent Python version at the
 time of writing. After downloading, it is recommended to verify the SHA256 checksum
 by running
