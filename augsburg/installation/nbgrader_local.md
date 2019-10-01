@@ -218,6 +218,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out 
 ```
 According to the option `-days`, the certificate will be valid for 365 days. The
 generated file `jupyterhub.pem` should be put in the directory `/etc/ssl/certs`
-while the file `jupyterhub.key` should be put in `/etc/ssl/private`.
+while the file `jupyterhub.key` should be put in `/etc/ssl/private`. Moving files
+to these directories will typically require system administrator privileges which
+can be achieved by means of `sudo`.
 
 ## Setting up nbgrader for a course
