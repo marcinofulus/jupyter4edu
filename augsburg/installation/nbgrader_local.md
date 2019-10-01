@@ -112,10 +112,6 @@ jupyter nbextension list
 ```
 which will result in
 ```
-config dir: /home/teacher/.jupyter
-    nbgrader.server_extensions.assignment_list  enabled
-    - Validating...
-      nbgrader.server_extensions.assignment_list  OK
 config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter
     nbgrader.server_extensions.formgrader  enabled
     - Validating...
@@ -133,13 +129,6 @@ config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter
 and
 ```
 Known nbextensions:
-  config dir: /home/teacher/.jupyter/nbconfig
-    notebook section
-      create_assignment/main  enabled
-      - Validating: OK
-    tree section
-      assignment_list/main  enabled
-      - Validating: OK
   config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter/nbconfig
     notebook section
       jupyter-js-widgets/extension  enabled
