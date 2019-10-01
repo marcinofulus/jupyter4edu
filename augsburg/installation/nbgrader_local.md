@@ -83,7 +83,7 @@ dependencies:
   - jupyterhub
   - nbgrader
 ```
-Further dependencies can be needed if required. The environment is then created by
+Further dependencies can be added if required. The environment is then created by
 means of
 ```
 conda env create --file environment.yml
