@@ -112,7 +112,7 @@ jupyter nbextension list
 ```
 which will result in
 ```
-config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter
+config dir: /home/teacher/miniconda3/envs/nbgrader/etc/jupyter
     nbgrader.server_extensions.formgrader  enabled
     - Validating...
       nbgrader.server_extensions.formgrader  OK
@@ -129,7 +129,7 @@ config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter
 and
 ```
 Known nbextensions:
-  config dir: /home/teacher/.conda/envs/nbgrader/etc/jupyter/nbconfig
+  config dir: /home/teacher/miniconda3/envs/nbgrader/etc/jupyter/nbconfig
     notebook section
       jupyter-js-widgets/extension  enabled
       - Validating: OK
@@ -148,8 +148,7 @@ Known nbextensions:
 ```
 respectively. The configuration directory in the conda environment
 (`.conda/envs/nbgrader`) lists the availability for all users having access to 
-the environment while the local configuration in `.jupyter` refers to the specific
-user, in our case `teacher`.
+the environment.
 
 We now restrict `create_assignment`, `formgrader`, and  `course_list` to the
 user `teacher` by
@@ -174,7 +173,40 @@ The configuration can be verified by means of
 jupyter serverextension list
 jupyter nbextension list
 ```
-as shown above.
+resulting in the following two lists
+```
+config dir: /home/teacher/.jupyter
+    nbgrader.server_extensions.formgrader  enabled
+    nbgrader.server_extensions.course_list  enabled
+config dir: /home/teacher/miniconda3/envs/nbgrader/etc/jupyter
+    nbgrader.server_extensions.formgrader disabled
+    nbgrader.server_extensions.validate_assignment  enabled
+    nbgrader.server_extensions.assignment_list  enabled
+    nbgrader.server_extensions.course_list disabled
+```
+and
+```
+Known nbextensions:
+  config dir: /home/teacher/.jupyter/nbconfig
+    notebook section
+      create_assignment/main  enabled
+    tree section
+      formgrader/main  enabled
+      course_list/main  enabled
+  config dir: /home/teacher/miniconda3/envs/nbgrader/etc/jupyter/nbconfig
+    notebook section
+      jupyter-js-widgets/extension  enabled
+      create_assignment/main disabled
+      validate_assignment/main  enabled
+    tree section
+      formgrader/main disabled
+      assignment_list/main  enabled
+      course_list/main disabled
+
+```
+respectively. The configuration stored in the user's directory `.jupyter` and its
+subdirectory shows the extensions enabled for this user while these extensions
+are now disabled for system-wide use.
 
 ## Setting up Jupyterhub
 
