@@ -26,7 +26,7 @@ by running
 ```
 sha256sum Miniconda3-latest-Linux-x86_64.sh
 ```
-and comparing the result with the checksum given on the download webpage.
+and comparing the result with the checksum given on the download web page.
 
 `miniconda` can either be installed system-wide or locally for the user `teacher`.
 We will do the latter and assume that we are already logged in as `teacher`. The
@@ -96,6 +96,12 @@ conda activate nbgrader
 The environment can be deactivated at any time, if necessary, by means of
 ```
 conda deactivate
+```
+
+A prerequisite for Jupyterhub is `configurable-http-proxy`. We can now install
+it globally by
+```
+sudo ./miniconda3/envs/nbgrader/bin/npm install -g configurable-http-proxy
 ```
 
 With this installation procedure so far, parts of nbgrader will be enabled system-wide
@@ -218,8 +224,81 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out 
 ```
 According to the option `-days`, the certificate will be valid for 365 days. The
 generated file `jupyterhub.pem` should be put in the directory `/etc/ssl/certs`
-while the file `jupyterhub.key` should be put in `/etc/ssl/private`. Moving files
-to these directories will typically require system administrator privileges which
-can be achieved by means of `sudo`.
+while the file `jupyterhub.key` should be put in `/etc/ssl/private`.
+
+Moving files to these directories will typically require system administrator privileges
+which can be achieved by means of `sudo`. If it is done with a newly created `teacher`
+account, this user might need to be added to the `sudo` group. This step can be done
+by a user already in this group by executing
+```
+sudo adduser teacher sudo
+```
+To set the owner and permissions use
+```
+sudo chown root:root /etc/ssl/certs/jupyterhub.pem
+sudo chmod 644 /etc/ssl/certs/jupyterhub.pem
+sudo chown root:ssl-cert /etc/ssl/private/jupyterhub.key
+sudo chmod 640 /etc/ssl/private/jupyterhub.key
+```
+
+The paths to these files should be stored in the Jupyterhub configuration file.
+First generate such a file by
+```
+jupyterhub --generate-config
+```
+and modify the corresponding entries to read
+```
+## Path to SSL certificate file for the public facing interface of the proxy
+#  
+#  When setting this, you should also set ssl_key
+c.JupyterHub.ssl_cert = '/etc/ssl/certs/jupyterhub.crt'
+
+## Path to SSL key file for the public facing interface of the proxy
+#  
+#  When setting this, you should also set ssl_cert
+c.JupyterHub.ssl_key = '/etc/ssl/private/jupyterhub.key'
+```
+
+Jupyterhub will need to store a database and a Cookie secret. A good place
+to do so is `/srv/jupyterhub` which needs to be created and should belong
+to `root`.
+```
+sudo mkdir -p /srv/jupyterhub
+```
+Later, `/srv` will also contain a subdirectory acting as an exchange directory
+for nbgrader.
+
+Now, we can set the corresponding options in the Jupyterhub configuration
+```
+## File in which to store the cookie secret.
+c.JupyterHub.cookie_secret_file = '/srv/jupyterhub/jupyterhub_cookie_secret'
+
+## url for the database. e.g. `sqlite:///jupyterhub.sqlite`
+c.JupyterHub.db_url = '/srv/jupyterhub/jupyterhub.sqlite'
+```
+
+We also need to define a Jupyterhub spawner
+```
+#  Some spawners allow shell-style expansion here, allowing you to use
+#  environment variables. Most, including the default, do not. Consult the
+#  documentation for your spawner to verify!
+c.Spawner.cmd = ['/home/teacher/miniconda3/envs/nbgrader/bin/jupyterhub-singleuser']
+```
+
+Finally, a natural place to store the configuration is `/etc/jupyterhub` and
+we move it there, even though it could be kept in a different place as well.
+```
+sudo mkdir -p /etc/jupyterhub
+sudo mv jupyterhub_config.py /etc/jupyterhub
+```
+
+We now should be able to start Jupyterhub by
+```
+sudo ./miniconda3/envs/nbgrader/bin/jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
+```
+and access it by pointing the web browser to `https://127.0.0.1:8000`. The web
+browser might complain about our self-signed certificate. We can exceptionally
+accept the certificate for our purposes but a self-signed certificate should not
+be used in production.
 
 ## Setting up nbgrader for a course
