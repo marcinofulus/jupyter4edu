@@ -302,3 +302,45 @@ accept the certificate for our purposes but a self-signed certificate should not
 be used in production.
 
 ## Setting up nbgrader for a course
+
+In order to exchange files with students, nbgrader needs access to a directory
+devoted to this purpose. We will put it in `/srv` next to the Jupyterhub database
+and cookie secret
+```
+sudo mkdir -p /srv/nbgrader/exchange
+sudo chmod 777 /srv/nbgrader/exchange
+```
+The second line sets the permissions and in particular allows any user to
+read from and write into the exchange directory.
+
+Now we set up nbgrader for a test course. With our conda environment
+`nbgrader` activated, we run
+```
+nbgrader quickstart testcourse
+```
+in a directory under which we would like to place the nbgrader infrastructure for
+our course. `testcourse` could be replaced by another name identifying the course.
+In `testcourse/source`, a default problem set `ps1` can be found.
+
+For Jupyterhub to know where the course resides, a configuration file is needed
+which will be found by Jupyterhub. The place for local configuration information
+is `.jupyter` in the home directory of the user `teacher`. There, a file
+`nbgrader_config.py` should be placed with the following content
+```
+c = get_config()
+c.CourseDirectory.course_id = 'testcourse'
+c.CourseDirectory.root = '/home/teacher/testcourse'
+c.Exchange.root = '/srv/nbgrader/exchange'
+```
+
+Logging into Jupyterhub, the user `teacher` should now be able to click on
+the `Formgrader` tab and generate and release the problem set `ps1` to students.
+As a first check, `teacher` can fetch the problem set her- or himself after
+clicking on the `Assignments` tab. 
+
+Logging in as user `student`, pointing the web browser to `https://127.0.0.1:8000`,
+and logging into Jupyterhub, it should be possible to fetch, solve, validate, and
+submit the problem set. Of course, this assumes a running Jupyterhub started by
+`teacher` as explained above.
+
+More information on using nbgrader can be found at https://nbgrader.readthedocs.io.
