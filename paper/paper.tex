@@ -211,16 +211,8 @@ code, visualization, together with resources: source code, data,
 media.  It consists of a collection of two types of cells, namely code
 cells and text cells. The latter may contain text written in markdown,
 possibly including formulas as well as figures. This structure
-facilitates to guide students through a problem set. Usually, the code
-in a notebook is intended to be executed in a linear fashion even
-though this is not imposed by the notebook. In fact, the notebook
-should invite students to experiment which implies the opening of new
-cells and the execution of code written by the student. In this
-process, out-of-order execution naturally occurs and can have side
-effects which tend to confuse students. While the order of execution
-of individual cells can be inferred by the sequence number attributed
-to a cell once it has been executed, in particular beginners are not
-aware of the problems that out-of-order execution can entail.
+facilitates to guide students through a problem set.
+
 
 Using the Jupyter notebook for exercises is interesting because students can
 easily experiment with code. At the same time one should be aware that students
@@ -415,6 +407,19 @@ directly provided by \texttt{nbgrader}. If points are assigned appropriately to
 the individual tasks, one can determine the number of points earned as the
 minimum of the total sum of points earned and the maximum number of points
 attributed to the problem set.
+
+
+\section{Problems and pitfalls in using Jupyter notebook}
+Usually, the code in a notebook is intended to be executed in a linear fashion even
+though this is not imposed by the notebook. In fact, the notebook
+should invite students to experiment which implies the opening of new
+cells and the execution of code written by the student. In this
+process, out-of-order execution naturally occurs and can have side
+effects which tend to confuse students. While the order of execution
+of individual cells can be inferred by the sequence number attributed
+to a cell once it has been executed, in particular beginners are not
+aware of the problems that out-of-order execution can entail.
+
 
 \section{Conclusion}
 
