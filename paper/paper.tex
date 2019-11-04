@@ -209,9 +209,10 @@ used to help both students as well as teachers.
 Generally speaking, a Jupyter notebook is a document mixing prose,
 code, visualization, together with resources: source code, data,
 media.  It consists of a collection of two types of cells, namely code
-cells and text cells (see fig. \ref{fig:notebook}). The latter may contain text written in markdown,
-possibly including formulas as well as figures. This structure
-facilitates to guide students through a problem set.
+cells and text cells (see fig. \ref{fig:notebook}). The latter may
+contain text written in markdown, possibly including formulas as well
+as figures. This structure facilitates to guide students through a
+problem set.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figs/notebook.png}
@@ -220,20 +221,17 @@ facilitates to guide students through a problem set.
 \label{fig:notebook}
 \end{figure}
 
+Jupyter notebook has recenely been popular among researchers as it can
+embody the FAIR (Findable, Accessible, Interoperable, Reusable)
+principles for scholarly communication \cite{Randles2017}. The number
+of notebooks which are publically available on github now exceeds 5
+milion.
 
 
+Jupyterhub a software providing a way to serve Jupyter notebook for
+multiple users. It can be used in a classes of students, all
 
-Using the Jupyter notebook for exercises is interesting because students can
-easily experiment with code. At the same time one should be aware that students
-might think that this is the standard way of programming in Python. While it is
-indeed possible to develop pieces of a more complex program in the Jupyter 
-notebook and later combine these pieces, this is not the standard approach for
-complex programming tasks. Therefore, students should also be acquainted with
-the IDEs like Spyder distributed with the Anaconda distribution or the use of
-editors like vim or others which can be configures to support programming in
-Python.
-
-Jupyterhub as a centrally provided resource to run a Jupyter notebook from a
+ a centrally provided resource to run a Jupyter notebook from a
 remote computer makes problem sets or more generally teaching material easily
 accessible without the need for a local Python installation. Furthermore, this
 approach ensures a consistent working environment for all students. However,
@@ -419,15 +417,28 @@ attributed to the problem set.
 
 
 \section{Problems and pitfalls in using Jupyter notebook}
-Usually, the code in a notebook is intended to be executed in a linear fashion even
-though this is not imposed by the notebook. In fact, the notebook
-should invite students to experiment which implies the opening of new
-cells and the execution of code written by the student. In this
-process, out-of-order execution naturally occurs and can have side
-effects which tend to confuse students. While the order of execution
-of individual cells can be inferred by the sequence number attributed
-to a cell once it has been executed, in particular beginners are not
-aware of the problems that out-of-order execution can entail.
+Usually, the code in a notebook is intended to be executed in a linear
+fashion even though this is not imposed by the notebook. In fact, the
+notebook should invite students to experiment which implies the
+opening of new cells and the execution of code written by the
+student. In this process, out-of-order execution naturally occurs and
+can have side effects which tend to confuse students. While the order
+of execution of individual cells can be inferred by the sequence
+number attributed to a cell once it has been executed, in particular
+beginners are not aware of the problems that out-of-order execution
+can entail.
+
+
+Using the Jupyter notebook for exercises is interesting because
+students can easily experiment with code. At the same time one should
+be aware that students might think that this is the standard way of
+programming in Python. While it is indeed possible to develop pieces
+of a more complex program in the Jupyter notebook and later combine
+these pieces, this is not the standard approach for complex
+programming tasks. Therefore, students should also be acquainted with
+the IDEs like Spyder distributed with the Anaconda distribution or the
+use of editors like vim or others which can be configures to support
+programming in Python.
 
 
 \section{Conclusion}
@@ -500,6 +511,11 @@ The authors declare that they have no conflict of interest.
 Abbott, B. P. \textit{et al.} (2016).
 GW150914: First results from the search for binary black hole coalescence with Advanced LIGO,
 \textit{Physical Review D}, 93(12), 122003.
+
+\bibitem{Randles2017}
+B. M. {Randles} and I. V. {Pasquetto} and M. S. {Golshan} and C. L. {Borgman}
+2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL),
+2017, doi={10.1109/JCDL.2017.7991618}
 
 \bibitem{EHT}
 % https://doi.org/10.3847/2041-8213/ab0c57
