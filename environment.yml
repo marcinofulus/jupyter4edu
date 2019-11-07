@@ -3,6 +3,10 @@ channels:
   - conda-forge
 dependencies:
   - python
+  - jupyterlab
+  - nodejs
+  - nbconvert
+  - widgetsnbextension
   - numpy
   - k3d
   - pip
