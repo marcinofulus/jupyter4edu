@@ -13,6 +13,7 @@ dependencies:
   - sqlalchemy
   - sympy
   - nbgrader
+  - scikit-learn
   - pip:
     - nbgitpuller
     - sphinx-gallery
