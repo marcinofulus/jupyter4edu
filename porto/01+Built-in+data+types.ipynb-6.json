@@ -1,0 +1,791 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "# Built-in data types"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In order to store information during the run of a program we use variables. Every variable has its type which determines the size and organization of the memory allocated to it. Java supports two kinds of data types - built-in types and objective ones. Built-in data types contain a number of types for representing integers (byte, short, int, long), two types for floating-point numbers (float and double), a type for representing characters (char) and a type for representing logical value (boolean). In order to store information during a run of a program, we need to create and use variables of these data types - this essentially means three actions:\n",
+    "\n",
+    "\n",
+    "- declaring (a type of) variable (1),\n",
+    "- assigning a value to it (2) and, finally,\n",
+    "- performing operations on it (3).\n",
+    "\n",
+    "In order to declare a variable, you need to specify its type followed by the name which will be used to identify this variable."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "int i;   //(1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Assigning a value to a built-in variable is performed with the use of Java assignment operator \"=\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "1=7;   //(2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Finally, performing operations on a variable requires the use of operators."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "i=i+3;   //(3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Numeric types - integers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Java uses four types for integers that differ with respect to the size of the storage allocated for the given type.\n",
+    "\n",
+    "Data type|Range|Size\n",
+    "-|-|-\n",
+    "byte|$-2^7$ to $2^7-1$|8-bit signed\n",
+    "short|$-2^{15}$ to $2^{15}-1$|16-bit signed\n",
+    "int|$-2^{31}$ to $2^{31}-1$|32-bit signed\n",
+    "long|$-2^{63}$ to $2^{63}-1$|64-bit signed\n",
+    "\n",
+    "A variable of type `int` can be assigned integer in the range from -2 147 483 648 to 2 147 483 647."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "127\n"
+     ]
+    }
+   ],
+   "source": [
+    "byte i = 127;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "32767\n"
+     ]
+    }
+   ],
+   "source": [
+    "short i = 32767;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2147483647\n"
+     ]
+    }
+   ],
+   "source": [
+    "int i = 2147483647;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "An integer literal is assumed to be of the `int` type - to denote an integer literal of the `long` type it must be followed by \"L\" (or \"l\") sign."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9223372036854775807\n"
+     ]
+    }
+   ],
+   "source": [
+    "long i = 9223372036854775807L;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To improve readability, you may use underscores between two digits in a number literal."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9223372036854775807\n"
+     ]
+    }
+   ],
+   "source": [
+    "long i = 9_223_372_036_854_775_807L;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "By default, an integer literal denotes a decimal integer, a binary integer literal it must be denoted with leading \"0b\" or \"0B\" (zero B)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "int i = 0B1111;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "An octal integer literal is denoted by a leading \"0\" (zero)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4095\n"
+     ]
+    }
+   ],
+   "source": [
+    "int i = 07777;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " A hexadecimal integer literal is denoted with leading \"0x\" or \"0X\" (zero X)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "65535\n"
+     ]
+    }
+   ],
+   "source": [
+    "int i = 0XFFFF;\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "int i;   //(1)\n",
+    "i=7;     //(2)\n",
+    "i=i+3;   //(3)\n",
+    "\n",
+    "System.out.println(i);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Numeric types - floating-point numbers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To represent floating point numbers, Java support two built-in data types complying with IEEE 754 (standard approved by the Institute of Electrical and Electronics Engineers for representing floating-point numbers).\n",
+    "\n",
+    "Data type|Range|Precision|Size\n",
+    "-|-|-|-\n",
+    "float|approx. $\\pm 3.4 * {10}^{38}$|7-8 significant digits|32-bit\n",
+    "double|approx. $\\pm 1.8 * {10}^{308}$|15-17 significant digits|64-bit\n",
+    "\n",
+    "A floating point literal is assumed to be of the `double` type - to denote a floating point literal of the `float` type it must be followed by \"F\" (or \"f\") sign."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.14\n"
+     ]
+    }
+   ],
+   "source": [
+    "float x = 3.14F;\n",
+    "System.out.println(x);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.14\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 3.14;\n",
+    "System.out.println(x);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1.7976931348623157E308\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 1.7976931348623157E+308;\n",
+    "System.out.println(x);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6.28\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x;   //(1)\n",
+    "x=3.14;     //(2)\n",
+    "x=x*2;      //(3)\n",
+    "\n",
+    "System.out.println(x);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A ```float``` is represented using 32 bits, and each possible combination of bits represents one real number. This means that at most $2^{32}$ possible real numbers can be exactly represented (including including plus infinity, minus infinity, and NaN), even though there are infinitely many real numbers, and is represented as \n",
+    "\n",
+    "$$(-1)^s \\cdot M \\cdot 2^{e-127}$$\n",
+    "\n",
+    "with a sign bit s (interpreted as plus or minus), 8 bits for the exponent e, and 23 bits for the mantissa M. A ```double``` uses 64 bits - an 11 bit exponent with a bias of 1023, and a 52 bit mantissa.\n",
+    "\n",
+    "Contrary to integer operations, floating point arithmetic is always approximate and the precision of the result depends on the data types used. As a result, floating point types must not be used to represent, for example, monetary data. Cumulation of floating point round off errors was the cause of a number of spectacular incidents like the explosion of unmanned Ariane 5 space rocket in 1996. This must be taken into account particularly when comparing floating point variables."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "false\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 3*0.1;\n",
+    "double y = 0.3;\n",
+    "\n",
+    "System.out.println(x == y);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "true\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 5*0.1;\n",
+    "double y = 0.5;\n",
+    "\n",
+    "System.out.println(x == y);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Or when it cames to floating point operations."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.33333334\n"
+     ]
+    }
+   ],
+   "source": [
+    "float x = 1.0F;\n",
+    "float y = 3.0F;\n",
+    "float z = x / y;\n",
+    "\n",
+    "System.out.println(z);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.3333333333333333\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 1.0;\n",
+    "double y = 3.0;\n",
+    "double z = x / y;\n",
+    "\n",
+    "System.out.println(z);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Particular attention must be paid in the case of operations between the numbers which significantly differ in magnitude."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "737243.3\n"
+     ]
+    }
+   ],
+   "source": [
+    "float x = 3.72467777E-3F;\n",
+    "float y = 7.37243333E+5F;\n",
+    "\n",
+    "float z = x + y;\n",
+    "\n",
+    "System.out.println(z);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "737243.3367246777\n"
+     ]
+    }
+   ],
+   "source": [
+    "double x = 3.72467777E-3;\n",
+    "double y = 7.37243333E+5;\n",
+    "\n",
+    "double z = x + y;\n",
+    "\n",
+    "System.out.println(z);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Character type"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Java supports a two-byte built-in type that represents a single 16 bit Unicode (UTF-16) character\n",
+    "\n",
+    "Data type|Range|Size\n",
+    "-|-|-\n",
+    "char|'\\u0000' (0) to '\\uffff' (65535)|16-bit\n",
+    "\n",
+    "You can use such characters directly in your code or you can use a \"Unicode escape\" such as __```Se\\u00F1or```__ (Señor in Spanish). Java also supports a number of special escape sequences: __```\\b```__ (backspace), __```\\t```__ (tab), __```\\n```__ (line feed), __```\\f```__ (form feed), __```\\r```__ (carriage return), __```\\\"```__ (double quote), __```\\'```__ (single quote), and __```\\\\```__ (backslash)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n"
+     ]
+    }
+   ],
+   "source": [
+    "char c = 'A';\n",
+    "System.out.println(c);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "B\n"
+     ]
+    }
+   ],
+   "source": [
+    "char c='\\u0042';\n",
+    "System.out.println(c);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "An object of the Java API String class contains an array of the `char` type signs."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Text including spAces\n"
+     ]
+    }
+   ],
+   "source": [
+    "String s = \"Text including sp\\u0041ces\";\n",
+    "System.out.println(s);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "B\n",
+      "E\n"
+     ]
+    }
+   ],
+   "source": [
+    "char c;   //(1)\n",
+    "c='A';    //(2)\n",
+    "c++;      //(3)\n",
+    "System.out.println(c);\n",
+    "\n",
+    "c+=3;     //(3)\n",
+    "System.out.println(c);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Boolean type"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Boolean values are represented by Java the built-in type `boolean`, which may have two values, denoted as `true` and `false`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "true\n"
+     ]
+    }
+   ],
+   "source": [
+    "boolean b = true;\n",
+    "System.out.println(b);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "false\n"
+     ]
+    }
+   ],
+   "source": [
+    "boolean b = false;\n",
+    "System.out.println(b);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "true\n"
+     ]
+    }
+   ],
+   "source": [
+    "boolean b;   //(1)\n",
+    "b=false;     //(2)\n",
+    "b=!b;        //(3)\n",
+    "\n",
+    "System.out.println(b);"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Java",
+   "language": "java",
+   "name": "java"
+  },
+  "language_info": {
+   "codemirror_mode": "java",
+   "file_extension": ".java",
+   "mimetype": "text/x-java-source",
+   "name": "Java",
+   "pygments_lexer": "java",
+   "version": "9.0.4+11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
