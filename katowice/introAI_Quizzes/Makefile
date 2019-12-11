@@ -32,6 +32,9 @@ to_pl: $(notebooks_pl)
 	@echo CLEANING OUTPUT of $< 
 	@jupyter nbconvert --ClearOutputPreprocessor.enabled=True --clear-output $< 
 
+	@echo REMOVING EMPTY CELLS of $<
+	@jupyter nbconvert --RegexRemovePreprocessor.enabled=True --RegexRemovePreprocessor.patterns="['\s*\Z']"  --to=notebook  $< --output=`basename $<`
+
 	@echo Converting notebook  $< to english $@
 	@jupyter nbconvert --to selectLanguage --NotebookLangExporter.language=en  $< --stdout > $@ 
 
@@ -42,6 +45,9 @@ to_pl: $(notebooks_pl)
 
 	@echo CLEANING OUTPUT of $< 
 	@jupyter nbconvert --ClearOutputPreprocessor.enabled=True --clear-output $< 
+
+	@echo REMOVING EMPTY CELLS of $<
+	@jupyter nbconvert --RegexRemovePreprocessor.enabled=True --RegexRemovePreprocessor.patterns="['\s*\Z']"  --to=notebook  $< --output=`basename $<`
 
 	@echo Converting notebook  $< to polish $@
 	@jupyter nbconvert --to selectLanguage --NotebookLangExporter.language=pl  $< --stdout > $@ 
