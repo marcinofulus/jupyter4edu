@@ -39,6 +39,9 @@
 % Insert the name of "your journal" with
 \journalname{Journal of Science Education and Technology}
 %
+
+
+\hyphenation{Ju-py-ter} 
 \begin{document}
 
 \title{Experiences in teaching with Jupyter, Jupyterhub, and nbgrader}
@@ -179,43 +182,44 @@ appropriate.
 
 
 At the University of Silesia, Python is used as a introductory
-programming language for students of computer science. There has been
-implemented a concept of ``mobile computer classroom'' which consists
-of inexpensive and portable thin-client computers which are available
-to students in the rental office. They are used to access compute
-resources where the required software is available.  Chromebooks
-currently play the role of thins clients, which is why all services
-must be available through a web browser. Jupyter notebook fits
-perfectly in such a scenario. In recent years several scenarios of
-teaching workflow based on Juyter notebook have been tested and
-implemented.
+programming language for undegraduate students of ``Applied Computer
+Science'' programme. There has been implemented a concept of ``mobile
+computer classroom'' which consists of inexpensive and portable
+thin-client computers which are available to students in the rental
+office. They are used to access compute resources where the required
+software is available.  Chromebooks currently play the role of thins
+clients, which is why all services must be available through a web
+browser. Jupyter notebook fits perfectly in such a scenario. In recent
+years several teaching workflows based on Juyter notebook have been
+tested and implemented.
 
-In the Institute of Physics, the widespread use of the Python-based
-computer algebra system SageMath\cite{sagemath} system available in
-the browser has been in used for several years. This turned out to be
-an excellent solution. The Sage notebook (\texttt{sagenb}) provided
-ubiquitous access to computations in science education, and a large
-number of teaching materials where produced. This technology was also
-replicated in partner high schools as part of the iCSE4school project
-(details see \cite{icse4school}). Since 2011, c.a. 2000 students and
-over 500 high school pupils have used the system. The Sage notebooks
-have been served using a small computer cluster and until today users
-have created over 30000 notebook documents.
-
-The notebook system \texttt{sagenb} became obsolete and the currently
-SageMath switched to the Jupyter notebook. Additionally, Jupyter
-notebook supports using many other programming languages. Therefore en
-effort was initiated to replace old \texttt{sagenb} notebooks system
-for the sake of Jupyter, and to expand this technology to other
+At the Institute of Physics, the Jupyter notebook is not the first
+teaching experience with web based software for mathamatical
+explorations. SageMath\cite{sagemath}, the Python-based computer
+algebra system has been served to students and academic teachers for
+several years. The Sage notebook (\texttt{sagenb}) provided ubiquitous
+access to computations in science education, and a large number of
+teaching materials where produced. This technology was also replicated
+in partner high schools as part of the iCSE4school project (details
+see \cite{icse4school}). Since 2011, c.a. 2000 students and over 500
+high school pupils have used the system. The Sage notebooks have been
+served using a small computer cluster and until today users have
+created over 30000 notebook documents.  Over time, the notebook system
+\texttt{sagenb} has become obsolete and the currently SageMath
+software is available as a kernel to the Jupyter notebook. Therefore
+en effort was initiated to replace old \texttt{sagenb} notebooks
+system for the sake of Jupyter, and to expand this technology to other
 teaching programmes.
 
-In this paper, we will mainly concentrate on the case of course
-``Introduction to Artificial Intelligence``, which is attended by
-c.a. 50 Applied Computer Science students every year. The course uses
-Jupyter notebook as a teaching tool during both the lectures and
-tutorials. Students had to submit their work in the form of notebooks
-using \texttt{nbgrader} software. All excercices include automated
-tests to help both students as well as teachers.
+In this paper, we will the course: ``Introduction to Artificial
+Intelligence``, which is attended by c.a. 50 Applied Computer Science
+students every year. The course uses Jupyter notebook as a main
+teaching tool during both the lectures and tutorials. All materials
+are discributed and collected in as \texttt{*.ipynb} file. Moreover,
+students submit their assignments \texttt{nbgrader} software installed
+on publicly available web-address. All excercices include automated
+tests to help both students in self assessment as well as teachers in
+grading. 
 
 
 \subsection{University of Cyprus}
@@ -237,7 +241,7 @@ problem set.
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figs/notebook.png}
 \caption{Jupyter notebooks is a executable document which contains
-  rich-text and code (e.g. in Pyton). }
+  rich-text and code (e.g. in Python, R). }
 \label{fig:notebook}
 \end{figure}
 
@@ -253,7 +257,7 @@ multiple users. It can be used in a single classes of students, or can
 be deployed centrally on a faculty level. In both cases it provides
 computational resources to run a Jupyter notebook from a remote
 computing center. It can be used to distribute problem sets or more
-generally teaching material easily. and without the need for a local
+generally teaching material easily and without the need for a local
 Python installation. Furthermore, this approach ensures a consistent
 working environment for all students.
 
@@ -262,7 +266,7 @@ work which they are doing could in fact be done on their own computer
 instead of using some remote service where the underlying machinery is
 completely hidden.
 
-\section{\texttt{nbgrader}}
+\section{Creating and Grading assignments with \texttt{nbgrader}}
 
 \subsection{Functions}
 
@@ -437,6 +441,21 @@ directly provided by \texttt{nbgrader}. If points are assigned appropriately to
 the individual tasks, one can determine the number of points earned as the
 minimum of the total sum of points earned and the maximum number of points
 attributed to the problem set.
+
+\section{Typical workflow with Jupyter and nbgrader}
+
+\subsection{Subnotebooks }
+
+
+
+\subsection{In Lecture hand out  Perpectron-quizz}
+
+Jupyter notebook is used as hand-out material given during the lecture on learning Perceptron 
+
+# Layered neural network
+
+\section{Evaluation}
+
 
 
 \section{Problems and pitfalls in using Jupyter notebook}
