@@ -4,7 +4,7 @@ This repository contains teaching materials used during Erasmus+ project: Jupyte
 
 ## Content
 
-You can find here a collection of noetbooks which have beed used in teaching at European University Cyprus,  University of Augsburg and University of Silesia. They contain  different  approaches to the way of using `Jupyter` notebook and `nbgrader` software. 
+You can find here a collection of notebooks which have beed used in teaching at European University Cyprus,  University of Augsburg and University of Silesia. They contain  different  approaches to the way of using `Jupyter` notebook and `nbgrader` software. 
 
 Most of notebooks contain tests and are compatible with `nbgrader` software. It means that it is easy to produce student version (without solution) and check automatically corectness of the solution.
 
@@ -41,15 +41,60 @@ We will define two games for which the probability to loose exceeds the probabil
 
 This collection of notebooks illustrates the application of symbolic computer algebra in Python to problems of general relativity. It is based on SymPy and GraviPy. It uses interactive  3d visualisation using [K3d-jupyter](https://github.com/K3D-tools/K3D-jupyter).
 
-[Introduction to GraviPy](https://render.githubusercontent.com/view/IntroductionGravipy.ipynb)
-[Geodesics and Christoffel symbols](https://render.githubusercontent.com/view/Geodesics.ipynb)
-[Schwarzschild solution](https://render.githubusercontent.com/view/SchwarzschildMetric.ipynb)
-[Embedding of the Schwarzschild solution](https://render.githubusercontent.com/view/EmbeddingSchwarzschild.ipynb)
-[Eddington-Finkelstein coordinates](https://render.githubusercontent.com/view/EddingtonFinkelstein.ipynb)
-[Tolman-Oppenheimer-Volkoff equation](https://render.githubusercontent.com/view/TOVEquation.ipynb)
+ - [Introduction to GraviPy](https://render.githubusercontent.com/view/IntroductionGravipy.ipynb)
+ - [Geodesics and Christoffel symbols](https://render.githubusercontent.com/view/Geodesics.ipynb)
+ - [Schwarzschild solution](https://render.githubusercontent.com/view/SchwarzschildMetric.ipynb)
+ - [Embedding of the Schwarzschild solution](https://render.githubusercontent.com/view/EmbeddingSchwarzschild.ipynb)
+ - [Eddington-Finkelstein coordinates](https://render.githubusercontent.com/view/EddingtonFinkelstein.ipynb)
+ - [Tolman-Oppenheimer-Volkoff equation](https://render.githubusercontent.com/view/TOVEquation.ipynb)
 
-Jupyter notebooks which have been used in 
+### Introduction to artificial intelligence in Python
 
+This set of exercises contain  problem sets for tutorial and lecture supplementary materials.
+All exercices are compatible with `nbgrader` and have been used in a classroom. 
+ 
+ - Introduction of [numpy](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/introAI/Numpy)	
+ - Step by step implementation of [naive Bayes classifier](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Bayes/Naive_Bayes_5steps.ipynb)
+ - Classical approach to [MNIST dataset](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/MNIST/MNIST_sklearn_knn_SVM.ipynb). There are two versions of this material, the second one uses smaller [NIST8x8 dataset](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/MNIST/NIST8x8_sklearn_knn_SVM_linear.ipynb).
+ - [Logistic regression](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Logistic_regression/Logistic_regression.ipynb) with the steepest descent method. This approach uses `numpy` vector notation: dot products and broadcasting rules.
+ - [Principal Componen Analysis](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/PCA/PCA.ipynb) - implementation with  `numpy.linalg` module. 
+ - Step by stem implementation of	[kNN algorithm](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/kNN/kNN.ipynb) and [minimum distance classifier](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/kNN/min_distance.ipynb)
+ - [Classification Trees](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Trees/Classification_trees.ipynb), [random forest](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Trees/RandomForest.ipynb) and [boosting](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Trees/XGBoost.ipynb) with XGboost library.
+ - Neural networkss
+   - Minimalizasion algorithms in machine learning [minimum](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/minimum/01_minimum.ipynb)	
+   -	Implementation of a single [neuron]()https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/neuron/01_neuron.ipynb in object oriented fashion. It is used for [logistic regression](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/neuron/02_regresja_logistyczna.ipynb), [AND gate](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/neuron/03_bramka_AND.ipynb) and [OR gate](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/neuron/04_bramka_XOR.ipynb)
+   - Implementation of a neural network from scratch: 
+    - [single layer](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/01_layer.ipynb)
+    - [network of layers](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/02_network.ipynb)
+    - the implementation is tested on [XOR gate](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/03_bramka_XOR.ipynb), [function fitting](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/04_fitowanie_funkcji.ipynb) and [MNIST](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/05_MNIST.ipynb) dataset.   
+ - [Cross validation](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/cross_validation/CV.ipynb) in machine learning.	
+
+
+### Python in introductory mathematics course
+
+
+- [01-Intro_Tutorial_Students.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/01_Intro_Tutorial_Students.ipynb)
+- [02_Sets_1.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/02_Sets_1.ipynb)
+- [03_Sets_2.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/03_Sets_2.ipynb)
+- [04_Functions_1.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/04_Functions_1.ipynb)
+- [05_Functions_2.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/05_Functions_2.ipynb)
+- [06_Relations_1.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/06_Relations_1.ipynb)
+- [07_Relations_2.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/07_Relations_2.ipynb)
+
+### Python in introductory physics course
+
+- [08_Gravity_Kepler's_Laws.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/08_Gravity_Kepler's_Laws.ipynb)
+- [09_Electromagnetic_fields.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/09_Electromagnetic_fields.ipynb)
+- [10_Newton's Law of Gravity.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/10_Newton's%20Law%20of%20Gravity.ipynb)
+- [11_Planets_Dancing.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/11_Planets_Dancing.ipynb)
+- [12_Projectile Motion.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/12_Projectile%20Motion.ipynb)
+- [13_Toy Model of the Solar System.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/13_Toy%20Model%20of%20the%20Solar%20System.ipynb)
+- [14_Work_&_Energy.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/cyprus/14_Work_%26_Energy.ipynb)
+
+
+### Java course
+
+Java kernel made possible to use Jupyter notebook for java programming. There are materials of 13 [notebooks](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/java). 
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master)
 
