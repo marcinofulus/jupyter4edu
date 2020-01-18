@@ -39,7 +39,7 @@ We will define two games for which the probability to loose exceeds the probabil
  
 ### General relativity using symbolic computer algebra
 
-This collection of notebooks illustrates the application of symbolic computer algebra in Python to problems of general relativity. It is based on SymPy and GraviPy. It uses interactive  3d visualisation using [K3d-jupyter](https://github.com/K3D-tools/K3D-jupyter).
+This collection of notebooks illustrates the application of symbolic computer algebra in Python to problems of general relativity. It is based on SymPy and GraviPy. It uses interactive  3d visualisation using [K3D-jupyter](https://github.com/K3D-tools/K3D-jupyter).
 
  - [Introduction to GraviPy](https://render.githubusercontent.com/view/IntroductionGravipy.ipynb)
  - [Geodesics and Christoffel symbols](https://render.githubusercontent.com/view/Geodesics.ipynb)
@@ -52,6 +52,8 @@ This collection of notebooks illustrates the application of symbolic computer al
 
 This set of exercises contain  problem sets for tutorial and lecture supplementary materials.
 All exercices are compatible with `nbgrader` and have been used in a classroom. 
+
+
  
  - Introduction of [numpy](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/introAI/Numpy)	
  - Step by step implementation of [naive Bayes classifier](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Bayes/Naive_Bayes_5steps.ipynb)
@@ -68,6 +70,7 @@ All exercices are compatible with `nbgrader` and have been used in a classroom.
     - [network of layers](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/02_network.ipynb)
     - the implementation is tested on [XOR gate](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/03_bramka_XOR.ipynb), [function fitting](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/04_fitowanie_funkcji.ipynb) and [MNIST](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/05_MNIST.ipynb) dataset.   
  - [Cross validation](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/cross_validation/CV.ipynb) in machine learning.	
+
 
 
 ### Python in introductory mathematics course
