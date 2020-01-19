@@ -1,6 +1,17 @@
-## Jupyter4edu Erasmus+ project,
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master)
 
-This repository contains teaching materials used during Erasmus+ project: Jupyter@edu.
+# Jupyter4edu Erasmus+ project,
+
+This repository contains materials produced and used in teaching during Erasmus+ project: Jupyter@edu.
+
+
+## How to use?
+
+In order to run notebooks, one can clone this repository and setup Python environment based on  included  `environment.yml` file.  
+
+The other possibility is to launch binder container which starts temporary [Jupyter Notebook](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master) or [Jupyter lab](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master?urlpath=lab) interface
+
+
 
 ## Content
 
@@ -8,15 +19,14 @@ You can find here a collection of notebooks which have beed used in teaching at 
 
 Most of notebooks contain tests and are compatible with `nbgrader` software. It means that it is easy to produce student version (without solution) and check automatically corectness of the solution.
 
-### Excercises in scientific programming
+### Exercises in scientific programming
 
-[Excercises in scientific programming](https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises) contain 8 selected  problems in scientific programming. In this approach is has been used in a small class, and the main notebook was given to students. Supplementary notebooks explaining in details some technical aspects are provided to each topic. In this way the materials was  accessible for students with little programming skills. More advanced students can proceed directly to the main problem.
+[Exercises in scientific programming](https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises) contain 8 selected problems in scientific programming. Is has been used in a small class. The main notebook containing the probem description and tests was distributed among students. Supplementary notebooks explaining in details some technical aspects were available  for each topic. In this way the materials was accessible for students with little programming skills. More advanced students can proceed directly to the main problem.
 
-
- - [BirthdayProblem.ipynb](https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises/BirthdayProblem) solves a classical problem of finding two persons have their birthday on the same day of the year  by means of a simulation. It condrawing birthdays at random. The supplemental material contain brief explanation of lists and sets in `Python`: [~ListsAndSets.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/BirthdayProblem/~ListsAndSets.ipynb).
+ - [BirthdayProblem.ipynb](https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises/BirthdayProblem) solves a classical problem of finding two persons have their birthday on the same day of the year by means of a simulation. It contains drawing birthdays at random. The supplemental material explains in brief lists and sets in Python: [~ListsAndSets.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/BirthdayProblem/~ListsAndSets.ipynb).
  
  - [GameOfLife.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/GameOfLife/GameOfLife.ipynb) 
-The game of life simulates the dynamics of some living species according to a few simple rules devised by the British mathematician J. H. Conway. The excercise contain its implementation using `numpy` and `scipy` library.  It introduces user to the practical application of discrete [convolution operator](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/GameOfLife/~Convolution.ipynb). An important and attractive element is also visualisation of time evolution of the system using `ipywidgets` interface to `matplotlib` library.
+The game of life simulates the dynamics of some living species according to a few simple rules devised by the British mathematician J. H. Conway. The exercise contain its implementation using `numpy` and `scipy` library.  It introduces user to the practical application of discrete [convolution operator](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/GameOfLife/~Convolution.ipynb). An important and attractive element is also visualisation of time evolution of the system using `ipywidgets` interface to `matplotlib` library.
 
  -  [JuliaSet.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/JuliaSet/JuliaSet.ipynb) Julia sets offer a possibility to generate beautiful images. The supplementary notebooks contain in depth explanation of:
      
@@ -25,17 +35,17 @@ The game of life simulates the dynamics of some living species according to a fe
      - [Grid data structure](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/JuliaSet/~Grid.ipynb)
      - [Iteration prescription for Julia set](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/JuliaSet/~JuliaIteration.ipynb)
  
- - [Parrondo Paradox])(https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises/ParrondoParadox)
-We will define two games for which the probability to loose exceeds the probability to win. Surprisingly, by choosing an appropriate alternating sequence of the two loosing games, one finds that one wins in the long run. This situation is known as Parrondo's paradox. The notebooks provice guided implementation of simulation algorithm of this phenomena. Supplementary materials explains some aspects of [random number generation](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~RandomNumbers.ipynb) and provide instructions for implementing all parts of the algorithm [GameA.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~GameA.ipynb),[GameB.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~GameB.ipynb), [AlternatingAB.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~AlternatingAB.ipynb)
+ - [Parrondo Paradox](https://github.com/marcinofulus/jupyter4edu/tree/master/augsburg/exercises/ParrondoParadox)
+We will define two games for which the probability to loose exceeds the probability to win. Surprisingly, by choosing an appropriate alternating sequence of the two loosing games, one finds that one wins in the long run. This situation is known as Parrondo's paradox. The notebooks provide guided implementation of simulation algorithm of this phenomena. Supplementary materials explains some aspects of [random number generation](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~RandomNumbers.ipynb) and provide instructions for implementing all parts of the algorithm [GameA.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~GameA.ipynb), [GameB.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~GameB.ipynb), [AlternatingAB.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/ParrondoParadox/~AlternatingAB.ipynb)
 
 - Calculation of [Pi](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Pi/Pi.ipynb) by means of the arithmetic-geometric mean. This problem is supplemented by [IntegerAsString.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Pi/~IntegerAsString.ipynb).
 
- - [Symbolic computation Polynomials](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/Polynomials.ipynb). This excercise contains supplementary explanations of Python sets:[Sets.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/~Sets.ipynb),[Setdefault.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/~Setdefault.ipynb)
+- [Symbolic computation Polynomials](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/Polynomials.ipynb). This exercise contains supplementary explanations of Python sets:[Sets.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/~Sets.ipynb),[Setdefault.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Polynomials/~Setdefault.ipynb)
  
  
- - Determine the number of primes which can be interpreted as time [Prime Time](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/Primetime.ipynb). This exercise contain practice of important aspects of Python programming: [list comprehension](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/~ListComprehensions.ipynb) and demonstrates an angorithm known as [Sieve of Eratosthenes](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/~SieveOfEratosthenes.ipynb)
+ - Determine the number of primes which can be interpreted as time [Prime Time.ipynb](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/Primetime.ipynb). This exercise contain practice of important aspects of Python programming: [list comprehension](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/~ListComprehensions.ipynb) and demonstrates an angorithm known as [Sieve of Eratosthenes](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/PrimeTime/~SieveOfEratosthenes.ipynb)
  
- - [Diagonal sum in a spiral](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/Spiral.ipynb) is an interesting reason to gain some algorithmic practice in [functions](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/~IntroFunctions.ipynb) and [lists](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/~IntroLists.ipynb).
+ - [Diagonal sum in a spiral](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/Spiral.ipynb) is an interesting inspiration to gain some algorithmic practice in using  Python [functions](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/~IntroFunctions.ipynb) and [lists](https://github.com/marcinofulus/jupyter4edu/blob/master/augsburg/exercises/Spiral/~IntroLists.ipynb).
  
 ### General relativity using symbolic computer algebra
 
@@ -50,10 +60,10 @@ This collection of notebooks illustrates the application of symbolic computer al
 
 ### Introduction to artificial intelligence in Python
 
-This set of exercises contain  problem sets for tutorial and lecture supplementary materials.
-All exercices are compatible with `nbgrader` and have been used in a classroom. 
+This set of exercises contain  problem sets for tutorials and supplementary materials lectures.
+All exercices are compatible with `nbgrader` and it has been used in a classroom. 
 
-
+#### Tutorial problems
  
  - Introduction of [numpy](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/introAI/Numpy)	
  - Step by step implementation of [naive Bayes classifier](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/Bayes/Naive_Bayes_5steps.ipynb)
@@ -70,6 +80,26 @@ All exercices are compatible with `nbgrader` and have been used in a classroom.
     - [network of layers](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/02_network.ipynb)
     - the implementation is tested on [XOR gate](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/03_bramka_XOR.ipynb), [function fitting](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/04_fitowanie_funkcji.ipynb) and [MNIST](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/network/05_MNIST.ipynb) dataset.   
  - [Cross validation](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI/cross_validation/CV.ipynb) in machine learning.	
+
+#### Lecture Materials
+
+This collection contains notebooks which were distributed during lectures. They contain worked example of current topic with a simple task which has to be completed in several minutes. The answers were collected during the same lecture using nbgrader software.   
+
+- [Types of a norm of a vector](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz1/Quiz_norm.ipynb)
+- Plotting [Gaussian distribution]() approximating  arbitrarily distrubuted data.
+- [Linear regression]() - implementation of linear regression and "gradient checking".
+- Stochastic gradient descent algorithm: implementation in the case of linear regression in [one variable]() and [many variables]().
+- [Confusion matrix]() and Receiver operating characteristic
+- [Perceptron]() implementation of an algorythm, dual form and kernel trick.
+- Properties of [SVM]() method based on experiments of its implementation in sklearn.
+- [Minimal distance classifier]() as a linear classifier. Exact computation of decision areas.
+- [Gini index]() - implementation and properties.
+- Fisher's Linear Discriminant Analysis  [LDA]() - implementation and its comparison to `sklearn` 
+- Clustering using [k-means]()
+- Implementation of a [forward pass]() in fully connected neural network using numpy vectorized operations.
+- Implementation of a [backward pass]() in fully connected neural network using numpy vectorized operations..
+
+
 
 
 
@@ -97,11 +127,23 @@ All exercices are compatible with `nbgrader` and have been used in a classroom.
 
 ### Java course
 
-Java kernel made possible to use Jupyter notebook for java programming. There are materials of 13 [notebooks](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/java). 
+Java kernel (IJava), makes possible to use Jupyter notebook for java programming. There are materials of 13 [notebooks](https://github.com/marcinofulus/jupyter4edu/tree/master/katowice/java). 
 
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master)
+- [Built-in data types]()
+- [Operators and instructions]()
+- [Object data types]()
+- [Fields methods and constructors]()
+- [Basic Java API]()
+- [Inheritance and polymorphism]()
+- [Abstract classes and interfaces]()
+- [Handling exceptions]()
+- [Multithreading]()
+- [Generic data types]()
+- [Sets, lists, queues- maps]()
+- [Case study I - Arkanoid]()
+- [Case study II - http server]()
 
-Mybinder with Jupyterlab: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/marcinofulus/jupyter4edu/master?urlpath=lab)
+
 
 
 
