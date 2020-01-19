@@ -2,7 +2,6 @@ name: example-environment
 channels:
   - conda-forge
 dependencies:
-  - gravipy
   - python
   - jupyterlab
   - nodejs
@@ -20,3 +19,4 @@ dependencies:
     - sphinx-gallery
     - pandas
     - matplotlib
+    - gravipy
