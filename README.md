@@ -86,18 +86,18 @@ All exercices are compatible with `nbgrader` and it has been used in a classroom
 This collection contains notebooks which were distributed during lectures. They contain worked example of current topic with a simple task which has to be completed in several minutes. The answers were collected during the same lecture using nbgrader software.   
 
 - [Types of a norm of a vector](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz1/Quiz_norm.ipynb)
-- Plotting [Gaussian distribution]() approximating  arbitrarily distrubuted data.
-- [Linear regression]() - implementation of linear regression and "gradient checking".
-- Stochastic gradient descent algorithm: implementation in the case of linear regression in [one variable]() and [many variables]().
-- [Confusion matrix]() and Receiver operating characteristic
-- [Perceptron]() implementation of an algorythm, dual form and kernel trick.
-- Properties of [SVM]() method based on experiments of its implementation in sklearn.
-- [Minimal distance classifier]() as a linear classifier. Exact computation of decision areas.
-- [Gini index]() - implementation and properties.
-- Fisher's Linear Discriminant Analysis  [LDA]() - implementation and its comparison to `sklearn` 
-- Clustering using [k-means]()
-- Implementation of a [forward pass]() in fully connected neural network using numpy vectorized operations.
-- Implementation of a [backward pass]() in fully connected neural network using numpy vectorized operations..
+- Plotting [Gaussian distribution](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz2/Quiz_Gauss.ipynb) approximating  arbitrarily distrubuted data.
+- [Linear regression](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz3/Quiz_reglin.ipynb) - implementation of linear regression and "gradient checking".
+- Stochastic gradient descent algorithm: implementation in the case of linear regression in [one variable](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz4/Quiz_reglin-sgd.ipynb) and [many variables](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz4/Quiz_reglin-sgd_multi.ipynb).
+- [Confusion matrix](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz5/Quiz_confusion_matrix.ipynb) and Receiver operating characteristic
+- [Perceptron](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz6/Quiz_Perceptron.ipynb) implementation of an algorythm, dual form and kernel trick.
+- Properties of [SVM](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz7/Quiz_SVM_example_numerical_sklearn.ipynb) method based on experiments of its implementation in sklearn.
+- [Minimal distance classifier](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz8/Quiz_minimum_distance_as_linear.ipynb) as a linear classifier. Exact computation of decision areas.
+- [Gini index](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz9/Quiz_Gini.ipynb) - implementation and properties.
+- Fisher's Linear Discriminant Analysis  [LDA](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz10/Quiz_LDA.ipynb) - implementation and its comparison to `sklearn` 
+- Clustering using [k-means](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz11/Quiz_k-means.ipynb)
+- Implementation of a [forward pass](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz13/Quiz_nn_forward_pass.ipynb) in fully connected neural network using numpy vectorized operations.
+- Implementation of a [backward pass](https://github.com/marcinofulus/jupyter4edu/blob/master/katowice/introAI_Quizzes/Quiz12/Quiz_backpropagation.ipynb) in fully connected neural network using numpy vectorized operations..
 
 
 
